@@ -201,7 +201,7 @@ int main(int argc, char** argv) {
 
     bool file_failed = false;
     if (input_contents.empty()) {
-        std::fstream input_file(input_path);
+        std::fstream input_file(input_path, std::ios::in | std::ios::binary);
 
         if (input_file) {
             std::string buffer;
